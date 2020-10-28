@@ -26,19 +26,20 @@
 
 
 # input params
-if [ ! $# -eq 8 ]
+if [ ! $# -eq 9 ]
 then
-    echo "$0 - performs validation on SNV/INDEL calls by verify against deep targeted sequencing data"
-    echo "Usage: $0 REF_GENOME_FA TUMOUR_DEEP_SEQ_BAM NORMAL_DEEP_SEQ_BAM SNV_VCF INDEL_VCF DONOR_ID WORK_DIR OUTPUT_DIR"
+    echo "$0 - performs validation on SNV/INDEL calls by verifying against deep targeted sequencing data"
+    echo "Usage: $0 REF_GENOME_FA BED_WITH_TARGETS TUMOUR_DEEP_SEQ_BAM NORMAL_DEEP_SEQ_BAM SNV_VCF INDEL_VCF DONOR_ID WORK_DIR OUTPUT_DIR"
     echo
     exit
 fi
 
 REF_GENOME_FA=$1
-TUMOUR_DEEP_SEQ_BAM=$2
-NORMAL_DEEP_SEQ_BAM=$3
-SNV_VCF=$4
-INDEL_VCF=$5
-DONOR_ID=$6
-WORK_DIR=$7
-OUTPUT_DIR=$8
+BED_WITH_TARGETS=$2
+TUMOUR_DEEP_SEQ_BAM=$3
+NORMAL_DEEP_SEQ_BAM=$4
+SNV_VCF=$5
+INDEL_VCF=$6
+DONOR_ID=$7
+WORK_DIR=$8
+OUTPUT_DIR=$9
